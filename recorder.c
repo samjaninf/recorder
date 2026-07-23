@@ -299,7 +299,6 @@ static void putrec(struct udata *ud, time_t epoch, UT_string *reltopic, UT_strin
 
 		if ((j = json_decode(string)) != NULL) {
 			js = json_stringify(j, NULL);
-			fprintf(stderr, "JPJPJP: [%s]\n", js);
 			fprintf(fp, RECFORMAT, isotime(epoch),
 			UB(reltopic), js);
 			free(js);
